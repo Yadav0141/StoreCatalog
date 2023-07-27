@@ -7,6 +7,7 @@ namespace StoreCatalog.Data
     {
         public static void Initilize(StoreContext context)
         {
+            if (context.Products.Any()) return;
             var products = new List<Product>
             {
                         new Product
